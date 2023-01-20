@@ -1,0 +1,8 @@
+build/
+**/build/
+
+*.o
+*.obj
+*.a
+cpp_app
+**/cpp_app
