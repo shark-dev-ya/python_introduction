@@ -1,0 +1,14 @@
+{
+    "key1" : "string",
+    "key_for_int" : 192,
+    "key_for_float" : 3.14,
+    "array" : [
+        "string1",
+        "string2",
+        "string3"
+    ],
+    "complex-array":[
+        { "sub_key1" : "value11" },
+        { "sub_key2" : "value22" }
+    ]
+}

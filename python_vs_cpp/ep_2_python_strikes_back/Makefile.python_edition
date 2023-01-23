@@ -1,0 +1,27 @@
+BUILD_DIR := build
+
+py_script: python_script.py
+	@python3 python_script.py
+
+py_script_list_dict: python_script_list_dict.py
+	@python3 python_script_list_dict.py
+
+cpp_app_list_map: build_cpp_app_list_map
+	@./$(BUILD_DIR)/cpp_app_list_map
+
+cpp_app: build_cpp_app
+	@./$(BUILD_DIR)/cpp_app
+
+# c++ app*
+build_cpp_app: main.cpp
+	@mkdir -p $(BUILD_DIR)
+	@g++ -std=c++17 -o $(BUILD_DIR)/cpp_app main.cpp
+
+# c++ app*
+build_cpp_app_list_map: main_list_map.cpp
+	@mkdir -p $(BUILD_DIR)
+	@g++ -std=c++17 -o $(BUILD_DIR)/cpp_app_list_map main_list_map.cpp
+
+
+clean:
+	@rm -rf $(BUILD_DIR)
